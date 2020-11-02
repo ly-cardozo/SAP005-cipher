@@ -6,12 +6,43 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="root">
-      <h1>ENIGMA DO NERD</h1>
-      <h2>Quer comprar produtos com maiores descontos? Preparamos uma surpresa nessa Black Friday</h2>
-      <h3>Encontre a palavra escondida na página. Descubra o significado (Calma, a gente te ajuda!) e garanta +20% de desconto</h3>
+
+  <body class="body">
+    <div>
+      <header>
+        <h1 class="title">ENIGMA DO NERD</h1>
+      </header>
     </div>
+
+    <main>
+      <div class="leftColumn">
+        <h1>Quer comprar produtos com maiores descontos? Preparamos uma surpresa nessa Black Friday</h1>
+        <h2>Encontre a mensagem escondida na página. Descubra o significado (Calma, a gente te ajuda!) e garanta +20% de desconto</h2>
+      </div>
+
+      <div class="rightColun">
+        <label for="originalMsg">Enigma do Nerd</label>
+        <textarea id="originalMsg" placeholder="Digite sua mensagem aqui"></textarea>
+      </div>
+
+      <div class="rightColun">
+        <label for="offset">Chave de Deslocamento</label>
+        <input type="number" id="offset" placeholder="nº"/>
+      </div>
+
+      <div class="rightColunButton">
+        <button id="encryptButton">Cifrar</button>
+        <button id="decryptButton">Decifrar</button>
+        <button id="clearButton">Limpar</button>
+      </div>
+
+      <div class="rightColun">
+        <label for="translatedMsg">Resultado Enigma do Nerd</label>
+        <textarea id="translatedMsg" placeholder="Resposta do Enigma"></textarea>
+      </div>
+    </main>
+
+    <footer class="footer">©Eliane Gomes Cardozo</footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
