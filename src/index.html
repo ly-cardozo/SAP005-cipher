@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <title>Coelho Geek</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
   </head>
 
-  <body class="body">
+  <body>
     <div>
       <header>
         <h1 class="title">ENIGMA DO NERD</h1>
@@ -15,29 +14,29 @@
     </div>
 
     <main>
-      <div class="leftColumn">
+      <div>
         <h1>Quer comprar produtos com maiores descontos? Preparamos uma surpresa nessa Black Friday</h1>
-        <h2>Encontre a mensagem escondida na página. Descubra o significado (Calma, a gente te ajuda!) e garanta +20% de desconto</h2>
+        <h1>Encontre a mensagem escondida na página. Descubra o significado (Calma, a gente te ajuda!) e garanta +20% de desconto</h1>
       </div>
 
-      <div class="rightColun">
-        <label for="originalMsg">Enigma do Nerd</label>
+      <div>
+        <label class="label" for="originalMsg">Enigma do Nerd</label>
         <textarea id="originalMsg" placeholder="Digite sua mensagem aqui"></textarea>
       </div>
 
-      <div class="rightColun">
-        <label for="offset">Chave de Deslocamento</label>
+      <div>
+        <label class="label" for="offset">Chave de Deslocamento</label>
         <input type="number" id="offset" placeholder="nº"/>
       </div>
 
-      <div class="rightColunButton">
-        <button id="encryptButton">Cifrar</button>
-        <button id="decryptButton">Decifrar</button>
-        <button id="clearButton">Limpar</button>
+      <div>
+        <button class="button" id="encryptButton">Cifrar</button>
+        <button class="button" id="decryptButton">Decifrar</button>
+        <button class="button" id="clearButton">Limpar</button>
       </div>
 
-      <div class="rightColun">
-        <label for="translatedMsg">Resultado Enigma do Nerd</label>
+      <div>
+        <label class="label" for="translatedMsg">Resultado Enigma do Nerd</label>
         <textarea id="translatedMsg" placeholder="Resposta do Enigma"></textarea>
       </div>
     </main>
