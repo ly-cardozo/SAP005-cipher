@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Syne+Mono); 
+/*Importei essa fonte de um link externo. Quando importar fonte, utilizar: (https://fonts.googleapis.com/css?family="nome da fonte)*/
 
 * {
     margin: 0;
@@ -9,80 +10,90 @@
 
 body {
     background-color: black;
-    background-image: url(CoelhoGeek.png);
+    /*background-image: url(CoelhoGeek.png);*/
+    background-image: url(CoelhoGeekLogo.png); /*significa que linkei um fundo do tipo imagem; Deixei essa imagem salva na minha pasta src*/
     background-repeat: no-repeat;
-    background-size: contain;
-    line-height: 4.2;
-}
+    background-position: bottom 100px right 40px;
+    background-size: 22%; /*altura da minha imagem de fundo*/
+    line-height: 2.5; /*ainda não entendi ao certo, mas vi que esse número utiliza a tela toda e foi o que mais gostei*/
+}   /*Aqui eu defini as características do corpo da minha página;*/
 
 .title {
     font-family: "Syne Mono";
-    font-size: 60px;
+    font-size: 80px;
     text-align: center;
+    text-shadow: 5px -5px 20px mediumturquoise; /*sombra no texto: desl.horizontal desl.vertical raio efeito blur cor*/
     color: orange
-}
+}   /*Aqui eu defini as características do meu título; perceba que o nome da fonte é a mesma que importei ali no começo*/
 
 main {
+    display: flex;  /*Informações no site: https://origamid.com/projetos/flexbox-guia-completo/*/
+    margin: 20px;
     font-family: 'Syne Mono';
-    font-size: 15px;
-    text-align: justify;
     color: mediumturquoise;
-}
+}   /*Aqui eu defini as características do elemento main (que define o conteúdo principal dentro do <body>)
+    Dividi o main em duas section: leftSide e rightSide para conseguir deixar o corpo html dividido em duas partes: ver desenho rascunha da página no readme*/
 
-.label {
-    font-size: 15px;
-    font-weight: bolder;
+.leftSide {
+    max-width: 1000px;       /*largura máxima*/
+    max-height: 800px;      /*altura máxima*/
+    font-size: 35px;
+    text-align: center;
+    padding: 2.5em 1em 1em; 
+    /*border: 2px solid mediumturquoise; - borda só para me situar na página*/
+}   
+
+.rightSide{
+    max-width: 1000px;      /*largura máxima*/
+    max-height: 800px;     /*altura máxima*/
+    font-size: 25px;
+    text-align: left;
+    padding: 1.5em; 
+    /*border: 2px solid mediumturquoise; - borda só para me situar na página*/
 }
 
 textarea {
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(40, 40, 40);
     border: 2px solid mediumturquoise;
     border-radius: 6px;
-    font-family: "Syne Mono";
-    font-size: 15px;
+    font-size: 20px;
     display: block;
-    /* ESTUDAR ESSA PARTE
-    margin-top: 0.5em; 
-    padding: 1em; 
-    */
-}
+    padding: 1em;
+}   /*Aqui eu defini as características do meu campo de mensagem*/
 
 input {
-    background-color: rgb(158, 158, 158);
+    background-color: rgb(40, 40, 40);
     border: 2px solid mediumturquoise;
     border-radius: 6px;
-    font-family: "Syne Mono";
-    font-size: 15px;
+    font-size: 20px;
     display: block;
     width: 100px;
     height: 3px;
-    margin-top: 0.5em;
     padding: 1em; 
-    
+}   /*Aqui eu defini as características do meu controle interativo (chave de desslocamento*/
 
-}
 .button {
     background-color: mediumturquoise;
-    border: 1px solid mediumturquoise;
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bolder;
     text-align: center;
     padding: 0.5em;
-    cursor: pointer;
+    cursor: pointer; /*aparece o icone de uma mão quando passo o cursor em cima*/
     color: black;
+}   /*Aqui eu inseri as características dos meus botões*/
 
-}
 .button:hover {
     background-color: black;
     border: 1px solid mediumturquoise;
     color: mediumturquoise;
-}
+}   /*Aqui eu inseri as carecterísticas que aparecerão quando o usuário passar o mouse em cima do botão*/
 
 .footer{
-    background-color: rgb(43, 41, 41);
+    background-color: rgb(40, 40, 40);
     font-family: 'Syne Mono';
     font-weight: bolder;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     color: mediumturquoise;
-}
+}   /*Aqui eu inseri as características do meu rodapé*/
