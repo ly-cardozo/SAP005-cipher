@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Syne+Mono); 
-/*Importei essa fonte de um link externo. Quando importar fonte, utilizar: (https://fonts.googleapis.com/css?family="nome da fonte)*/
+/*Importei essa fonte de um link externo.*/
 
+/* (*) significa que quero que todos os elementos da página tenha essa propriedade*/
 * {
     margin: 0;
     padding: 0;
@@ -10,16 +11,16 @@
 
 body {
     background-color: black;
-    /*background-image: url(CoelhoGeek.png);*/
+    /*background-image: url(CoelhoGeek.png); em dúvida de qual deixar*/
     background-image: url(CoelhoGeekLogo.png); /*significa que linkei um fundo do tipo imagem; Deixei essa imagem salva na minha pasta src*/
     background-repeat: no-repeat;
     background-position: bottom 100px right 40px;
-    background-size: 22%; /*altura da minha imagem de fundo*/
+    background-size: 20%; /*altura da minha imagem de fundo*/
     line-height: 2.5; /*ainda não entendi ao certo, mas vi que esse número utiliza a tela toda e foi o que mais gostei*/
 }   /*Aqui eu defini as características do corpo da minha página;*/
 
 .title {
-    font-family: "Syne Mono";
+    font-family: 'Syne Mono', monospace;
     font-size: 80px;
     text-align: center;
     text-shadow: 5px -5px 20px mediumturquoise; /*sombra no texto: desl.horizontal desl.vertical raio efeito blur cor*/
@@ -29,7 +30,7 @@ body {
 main {
     display: flex;  /*Informações no site: https://origamid.com/projetos/flexbox-guia-completo/*/
     margin: 20px;
-    font-family: 'Syne Mono';
+    font-family: 'Syne Mono', monospace;
     color: mediumturquoise;
 }   /*Aqui eu defini as características do elemento main (que define o conteúdo principal dentro do <body>)
     Dividi o main em duas section: leftSide e rightSide para conseguir deixar o corpo html dividido em duas partes: ver desenho rascunha da página no readme*/
@@ -58,7 +59,7 @@ textarea {
     border-radius: 6px;
     font-size: 20px;
     display: block;
-    padding: 1em;
+    padding: 2em;
 }   /*Aqui eu defini as características do meu campo de mensagem*/
 
 input {
@@ -76,7 +77,6 @@ input {
     background-color: mediumturquoise;
     border-radius: 6px;
     font-size: 20px;
-    font-weight: bolder;
     text-align: center;
     padding: 0.5em;
     cursor: pointer; /*aparece o icone de uma mão quando passo o cursor em cima*/
@@ -91,7 +91,7 @@ input {
 
 .footer{
     background-color: rgb(40, 40, 40);
-    font-family: 'Syne Mono';
+    font-family: 'Syne Mono', monospace;
     font-weight: bolder;
     font-size: 20px;
     text-align: center;
