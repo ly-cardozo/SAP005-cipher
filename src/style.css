@@ -11,7 +11,6 @@
 
 body {
     background-color: black;
-    /*background-image: url(CoelhoGeek.png); em dúvida de qual deixar*/
     background-image: url(CoelhoGeekLogo.png); /*significa que linkei um fundo do tipo imagem; Deixei essa imagem salva na minha pasta src*/
     background-repeat: no-repeat;
     background-position: bottom 100px right 40px;
@@ -45,8 +44,8 @@ main {
 }   
 
 .rightSide{
-    max-width: 1000px;      /*largura máxima*/
-    max-height: 800px;     /*altura máxima*/
+    max-width: 1000px;      
+    max-height: 800px;     
     font-size: 25px;
     text-align: left;
     padding: 1.5em; 
