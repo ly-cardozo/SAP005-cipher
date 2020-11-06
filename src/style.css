@@ -96,3 +96,12 @@ input {
     text-align: center;
     color: mediumturquoise;
 }   /*Aqui eu inseri as características do meu rodapé*/
+
+a {
+    font-size: 15px;
+    color: orange;
+}
+
+a:hover {
+    color: yellow;
+}
