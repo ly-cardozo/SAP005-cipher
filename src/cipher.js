@@ -4,41 +4,48 @@
 //  "string".length => contém o comprimento da string
 //  "string".fromCharcode()
 //  for (let i=0; i<input.lenght; i++) +> vai "olhar" cada um dos caracteres o elemento
+//  originalMsg.charCodeAt(i) - 65 => identifica a letra do alfabeto
+//  (positionAlphabet + offsetNumber) % 26) + 65 => 
 
  
 
 const cipher = {
 
   encode: function (offsetNumber, originalMsg) {
-    originalMsg = originalMsg.replace('Ç', 'C')
+    originalMsg = originalMsg.replace('Ç', 'C');
+    originalMsg = originalMsg.replace('', '');
+    const offsetNumberError = !offsetNumber;
+    const originalMsgError = !originalMsg
     let enigmaDoNerd = "";
 
-    if (!offsetNumber || !originalMsg) {
-      throw new TypeError('User did not enter the data correctly', 'cipher.js', 15);
+    if (offsetNumberError || originalMsgError) {
+      throw new TypeError('User did not enter the data correctly', 'cipher.js', 19);
     } else {
       for (let i=0; i <originalMsg.length; i++) {
         const positionAlphabet = originalMsg.charCodeAt(i) - 65;
-        const newAlphabetCharcode = ((positionAlphabet + offsetNumber) % 26) + 65;
-        const encryptLetter = String.fromCharCode(newAlphabetCharcode);
+        const newAlphabetCharCode = ((positionAlphabet + offsetNumber) % 26) + 65;
+        const encryptLetter = String.fromCharCode(newAlphabetCharCode);
 
         enigmaDoNerd += encryptLetter;
       }
       return enigmaDoNerd;
+      console.log(enigmaDoNerd)
     }
+
   },
   
   decode: function (offsetNumber, originalMsg) {
     let enigmaDoNerd = "";
 
     if (!offsetNumber || !originalMsg) {
-      throw new TypeError('User did not enter the data correctly', 'cipher.js', 15);
+      throw new TypeError('User did not enter the data correctly', 'cipher.js', 19);
     } else {
       for (let i = 0; i < originalMsg.length; i++) {
-        const positionAlphabet = originalMsg.charCodeAt(i) + 65;
-        const newAlphabetCharcode = ((positionAlphabet + offsetNumber) % 26) + 65;
-        const encryptLetter = String.fromCharCode(newAlphabetCharcode);
+        const positionAlphabetDecrypt = originalMsg.charCodeAt(i) - 65;
+        const newAlphabetCharCode = ((positionAlphabetDecrypt - offsetNumber) % 26) + 65;
+        const decryptLetter = String.fromCharCode(newAlphabetCharCode);
 
-        enigmaDoNerd += encryptLetter;
+        enigmaDoNerd += decryptLetter;
       }
       return enigmaDoNerd;
     }

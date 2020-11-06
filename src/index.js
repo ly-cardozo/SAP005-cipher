@@ -8,7 +8,7 @@ const decryptButton = document.querySelector('#decrypt-Button');
 const cleartButton = document.querySelector('#clear-Button');
 
 encryptButton.addEventListener('click', function () {
-    const originalMsg = string(takeOriginalMsg.value).toUpperCase();
+    const originalMsg = String(takeOriginalMsg.value).toUpperCase();
     const offsetNumber = Number(takeOffsetNumber.value);
     const encryptMsg = cipher.encode(offsetNumber, originalMsg);
     takeTranslatedMsg.value = encryptMsg;
@@ -16,15 +16,15 @@ encryptButton.addEventListener('click', function () {
 });
 
 decryptButton.addEventListener('click', function () {
-    const originalMsg = string(takeOriginalMsg.value).toUpperCase();
+    const originalMsg = String(takeOriginalMsg.value).toUpperCase();
     const offsetNumber = Number(takeOffsetNumber.value);
     const decryptMsg = cipher.decode(offsetNumber, originalMsg);
     takeTranslatedMsg.value = decryptMsg;
 });
 
 cleartButton.addEventListener('click', function () {
-    originalMsg.value = '';
-    offsetNumber.value = '';
+    takeOriginalMsg.value = '';
+    takeOffsetNumber.value = '';
     takeTranslatedMsg.value = '';
 });
 
