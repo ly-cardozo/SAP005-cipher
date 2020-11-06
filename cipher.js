@@ -1,32 +1,48 @@
 //  Segundo o vídeo do Daniel: ((códigoDaLetraASC - código1letra + deslocamento) %(módulo, que é o giro que vai dar) tamanhoAlfabeto) + código1letra
 //                             ((códigoDaLetraASC -      65      + deslocamento) %(módulo, que é o giro que vai dar)      26        ) +      65
 //  ["string".charCodeAt(número)] => ["A".charCodeAt(0)=65] essa função serve para saber o código da string em determinada posição. Nesse exemplo, código ASC
+//  "string".length => contém o comprimento da string
+//  "string".fromCharcode()
+//  for (let i=0; i<input.lenght; i++) +> vai "olhar" cada um dos caracteres o elemento
 
  
 
 const cipher = {
-  encode(offset, originalMsg) {
-    offset = offset % 26;
-    originalMsg = originalMsg.toUpperCase()
 
-    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let key = alphabet.charAt(offset);
-    let splitAlphabet = alphabet.split(key);
+  encode: function (offsetNumber, originalMsg) {
+    originalMsg = originalMsg.replace('Ç', 'C')
+    let enigmaDoNerd = "";
 
-    let newAlphabet = key + splitAlphabet[1] + splitAlphabet [0]
-    let newMsg = '';
-    for(let i=0; i < originalMsg.lenght; i++){
-      if(originalMsg.charAt(i) == ''){
-        newMsg+= '';
-    }else if(originalMsg.charAt(i) == ','){
-      newMsg+= ',';
-    }
-      else{
-        let number = alphabet.indexOf(originalMsg.charAt(i));
-        newMsg += newAlphabet[number];
+    if (!offsetNumber || !originalMsg) {
+      throw new TypeError('User did not enter the data correctly', 'cipher.js', 15);
+    } else {
+      for (let i=0; i <originalMsg.length; i++) {
+        const positionAlphabet = originalMsg.charCodeAt(i) - 65;
+        const newAlphabetCharcode = ((positionAlphabet + offsetNumber) % 26) + 65;
+        const encryptLetter = String.fromCharCode(newAlphabetCharcode);
+
+        enigmaDoNerd += encryptLetter;
       }
+      return enigmaDoNerd;
+    }
+  },
+  
+  decode: function (offsetNumber, originalMsg) {
+    let enigmaDoNerd = "";
+
+    if (!offsetNumber || !originalMsg) {
+      throw new TypeError('User did not enter the data correctly', 'cipher.js', 15);
+    } else {
+      for (let i = 0; i < originalMsg.length; i++) {
+        const positionAlphabet = originalMsg.charCodeAt(i) + 65;
+        const newAlphabetCharcode = ((positionAlphabet + offsetNumber) % 26) + 65;
+        const encryptLetter = String.fromCharCode(newAlphabetCharcode);
+
+        enigmaDoNerd += encryptLetter;
+      }
+      return enigmaDoNerd;
+    }
   }
-  return newMsg;
-}
+};
 
 export default cipher;

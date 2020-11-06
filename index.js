@@ -12,21 +12,21 @@ encryptButton.addEventListener('click', function () {
     const offsetNumber = Number(takeOffsetNumber.value);
     const encryptMsg = cipher.encode(offsetNumber, originalMsg);
     takeTranslatedMsg.value = encryptMsg;
-    //translatedMsg.innerHTML = encryptMsg; => posso fazer dessa forma também
-})
+    //takeTranslatedMsg.innerHTML = encryptMsg; => posso fazer dessa forma também
+});
 
 decryptButton.addEventListener('click', function () {
     const originalMsg = string(takeOriginalMsg.value).toUpperCase();
     const offsetNumber = Number(takeOffsetNumber.value);
-    const decryptMsg = cipher.encode(offsetNumber, originalMsg);
+    const decryptMsg = cipher.decode(offsetNumber, originalMsg);
     takeTranslatedMsg.value = decryptMsg;
-})
+});
 
 cleartButton.addEventListener('click', function () {
     originalMsg.value = '';
     offsetNumber.value = '';
     takeTranslatedMsg.value = '';
-})
+});
 
 //Alguns métodos de acesso DOM => são formas do JS entender ao quê estamos referenciando. Tudo o que tenha document se refere ao arquivo html
 //  => element.addEventListener() => ligar um evento de um objeto a uma função
