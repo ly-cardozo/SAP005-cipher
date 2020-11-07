@@ -41,15 +41,17 @@ O objetivo principal foi oferecer uma interface simples e ao mesmo tempo chamati
 ![alt text](src/img/EsboçoWireframe.png)
 _Wireframe Inicial_
 
+
 ![alt text](src/img/EnigmaDoNerd.png)
 _Interface Final_
+
 
   ###  :heavy_check_mark: Planejamento
 
 Para o planejamento do projeto, utilizei o modelo Kanban do [Trello](https://trello.com).
 
 ![alt text](src/img/Trello.png)
-_Meu Planejamento_
+_Planejamento Trello_
 
 ## 3. Ferramentas
 
